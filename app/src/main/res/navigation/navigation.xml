@@ -2,5 +2,37 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation">
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mohamedragabali.plantleafscan.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_saveFragment"
+            app:destination="@id/saveFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_adviceFragment"
+            app:destination="@id/adviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveFragment"
+        android:name="com.mohamedragabali.plantleafscan.SaveFragment"
+        android:label="fragment_save"
+        tools:layout="@layout/fragment_save" />
+    <fragment
+        android:id="@+id/adviceFragment"
+        android:name="com.mohamedragabali.plantleafscan.AdviceFragment"
+        android:label="fragment_advice"
+        tools:layout="@layout/fragment_advice" />
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.mohamedragabali.plantleafscan.ScanFragment"
+        android:label="fragment_scan"
+        tools:layout="@layout/fragment_scan" />
 </navigation>
