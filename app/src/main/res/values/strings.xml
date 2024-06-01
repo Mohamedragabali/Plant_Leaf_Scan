@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Plant Leaf Scan</string>
+    <string name="home">Home</string>
+    <string name="scan">Scan</string>
+    <string name="save">Save</string>
+    <string name="advice">Advice</string>
 </resources>
