@@ -1,4 +1,4 @@
-package com.mohamedragabali.plantleafscan.ui.save
+package com.mohamedragabali.plantleafscan.ui.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
