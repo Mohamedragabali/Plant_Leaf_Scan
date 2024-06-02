@@ -14,17 +14,17 @@
             android:id="@+id/action_homeFragment_to_scanFragment"
             app:destination="@id/scanFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_saveFragment"
-            app:destination="@id/saveFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_adviceFragment"
             app:destination="@id/adviceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
-        android:id="@+id/saveFragment"
-        android:name="com.mohamedragabali.plantleafscan.ui.save.SaveFragment"
-        android:label="fragment_save"
-        tools:layout="@layout/fragment_save" />
+        android:id="@+id/searchFragment"
+        android:name="com.mohamedragabali.plantleafscan.ui.save.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/adviceFragment"
         android:name="com.mohamedragabali.plantleafscan.ui.advice.AdviceFragment"
