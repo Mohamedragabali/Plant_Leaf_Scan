@@ -1,13 +1,16 @@
 package com.mohamedragabali.plantleafscan.ui.home.plant
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mohamedragabali.plantleafscan.R
 import com.mohamedragabali.plantleafscan.databinding.ItemPlantBinding
+import com.mohamedragabali.plantleafscan.domain.HomeItem
+import com.mohamedragabali.plantleafscan.domain.data.DataSource
 
-class PlantAdapter(val list: List<Pair<Int,String>>)  : RecyclerView.Adapter<PlantAdapter.PlantImageViewHolder>() {
+class PlantAdapter(private var list: List<Pair<Int,String>>)  : RecyclerView.Adapter<PlantAdapter.PlantImageViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantImageViewHolder {
