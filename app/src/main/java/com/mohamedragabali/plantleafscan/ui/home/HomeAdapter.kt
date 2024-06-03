@@ -5,8 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mohamedragabali.plantleafscan.R
-import com.mohamedragabali.plantleafscan.data.HomeItem
-import com.mohamedragabali.plantleafscan.data.HomeItemType
+import com.mohamedragabali.plantleafscan.domain.HomeItem
+import com.mohamedragabali.plantleafscan.domain.HomeItemType
 import com.mohamedragabali.plantleafscan.databinding.ItemHeaderBinding
 import com.mohamedragabali.plantleafscan.databinding.ItemPlantListBinding
 import com.mohamedragabali.plantleafscan.databinding.ItemPlantNamesListBinding

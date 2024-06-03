@@ -1,4 +1,4 @@
-package com.mohamedragabali.plantleafscan.data
+package com.mohamedragabali.plantleafscan.domain
 
 enum class HomeItemType {
     HEADER,
