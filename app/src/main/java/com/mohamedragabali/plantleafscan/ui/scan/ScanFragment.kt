@@ -20,6 +20,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import com.mohamedragabali.plantleafscan.databinding.FragmentScanBinding
+import com.mohamedragabali.plantleafscan.domain.data.DataSource
 import com.mohamedragabali.plantleafscan.ml.Model
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
@@ -89,7 +90,10 @@ class ScanFragment : Fragment() {
 
 
                 val predictedResult = labels[getMax(outputFeature0.floatArray)]
-                binding.result.text = "Prediction: $predictedResult"
+
+                binding.result.text = predictedResult
+                binding.diseaseTreatment.text = DataSource.diseaseTreatment(predictedResult).second
+
                 model.close()
             }
         }
