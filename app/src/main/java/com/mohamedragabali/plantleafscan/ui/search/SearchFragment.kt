@@ -4,11 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.fragment.app.Fragment
-import com.mohamedragabali.plantleafscan.R
-import com.mohamedragabali.plantleafscan.databinding.FragmentHomeBinding
 import com.mohamedragabali.plantleafscan.databinding.FragmentSearchBinding
 import com.mohamedragabali.plantleafscan.domain.data.DataSource
 
