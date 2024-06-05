@@ -79,10 +79,15 @@ class ScanFragment : Fragment() {
                 val model = Model.newInstance(requireActivity())
 
 
-
-                // Creates inputs for reference.
-                val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 200, 200, 3), DataType.FLOAT32)
-                inputFeature0.loadBuffer(byteBuffer)
+                if ((bitmap.width > 300) && (bitmap.height > 300)) {
+                    val wrongImage = "Not a Image of a leaf"
+                    Snackbar.make(it,wrongImage,Snackbar.LENGTH_SHORT).show()
+                    binding.result.text =wrongImage
+                    binding.diseaseTreatment.text ="$wrongImage. Please try another image"
+                }else{
+                    // Creates inputs for reference.
+                    val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 200, 200, 3), DataType.FLOAT32)
+                    inputFeature0.loadBuffer(byteBuffer)
 
                 // Runs model inference and gets result.
                 val outputs = model.process(inputFeature0)
@@ -91,8 +96,9 @@ class ScanFragment : Fragment() {
 
                 val predictedResult = labels[getMax(outputFeature0.floatArray)]
 
-                binding.result.text = predictedResult
-                binding.diseaseTreatment.text = DataSource.diseaseTreatment(predictedResult).second
+                    binding.result.text = predictedResult
+                    binding.diseaseTreatment.text = DataSource.diseaseTreatment(predictedResult).second
+                }
 
                 model.close()
             }
